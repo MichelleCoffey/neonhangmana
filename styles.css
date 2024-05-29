@@ -1,0 +1,65 @@
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.neon-text {
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
+}
+
+#reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 15%, rgba(208,222,33,1) 30%, rgba(79,220,74,1) 45%, rgba(63,218,216,1) 60%, rgba(47,201,226,1) 75%, rgba(28,127,238,1) 90%, rgba(95,21,242,1) 100%);
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+#reset-button:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+}
+
+#hangman {
+    width: 200px;
+    height: 200px;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    display: none;
+}
+
+#hangman line, #hangman circle {
+    display: none;
+}
+
+#hangman .visible {
+    display: block;
+}
+
+@keyframes neon-glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff;
+    }
+}
+
+.neon-text {
+    animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
