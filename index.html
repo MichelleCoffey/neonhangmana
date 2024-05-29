@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Rainbow Hangman</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Neon Rainbow Hangman</h1>
+        <div id="score-container" class="neon-text">Score: <span id="score">0</span></div>
+        <div id="word-container" class="neon-text"></div>
+        <div id="letters-container" class="neon-text"></div>
+        <div id="message" class="neon-text"></div>
+        <svg id="hangman" viewBox="0 0 200 200">
+            <!-- Hangman parts will be drawn here -->
+            <line id="gallows" x1="20" y1="180" x2="180" y2="180"/>
+            <line id="post" x1="50" y1="180" x2="50" y2="20"/>
+            <line id="beam" x1="50" y1="20" x2="120" y2="20"/>
+            <line id="rope" x1="120" y1="20" x2="120" y2="40"/>
+            <circle id="head" cx="120" cy="50" r="10"/>
+            <line id="body" x1="120" y1="60" x2="120" y2="100"/>
+            <line id="left-arm" x1="120" y1="70" x2="100" y2="90"/>
+            <line id="right-arm" x1="120" y1="70" x2="140" y2="90"/>
+            <line id="left-leg" x1="120" y1="100" x2="100" y2="130"/>
+            <line id="right-leg" x1="120" y1="100" x2="140" y2="130"/>
+        </svg>
+        <button id="reset-button">Reset Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
