@@ -25,10 +25,11 @@ function initGame() {
 
 function updateWordDisplay() {
     wordContainer.innerHTML = '';
-    for (let letter of selectedWord) {
+    for (let i = 0; i < selectedWord.length; i++) {
+        const letter = selectedWord[i];
         const span = document.createElement('span');
         span.textContent = guessedLetters.includes(letter) ? letter : '_';
-        span.classList.add('neon-text');
+        span.classList.add('neon-text', 'word-letter');
         wordContainer.appendChild(span);
     }
 }
@@ -39,7 +40,7 @@ function updateLettersDisplay() {
         const button = document.createElement('button');
         button.textContent = String.fromCharCode(i);
         button.disabled = guessedLetters.includes(button.textContent.toLowerCase());
-        button.classList.add('neon-text');
+        button.classList.add('neon-text', 'alphabet-button');
         button.addEventListener('click', () => guessLetter(button.textContent.toLowerCase()));
         lettersContainer.appendChild(button);
     }
