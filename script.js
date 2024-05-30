@@ -10,6 +10,8 @@ const message = document.getElementById('message');
 const resetButton = document.getElementById('reset-button');
 const scoreElement = document.getElementById('score');
 const hangman = document.getElementById('hangman');
+const correctSound = document.getElementById('correct-sound');
+const wrongSound = document.getElementById('wrong-sound');
 
 function initGame() {
     selectedWord = words[Math.floor(Math.random() * words.length)];
@@ -49,9 +51,11 @@ function updateLettersDisplay() {
 function guessLetter(letter) {
     guessedLetters.push(letter);
     if (selectedWord.includes(letter)) {
+        correctSound.play();
         updateWordDisplay();
         checkWin();
     } else {
+        wrongSound.play();
         mistakes++;
         drawHangman(mistakes);
         if (mistakes >= 6) {
@@ -102,3 +106,4 @@ resetButton.addEventListener('click', initGame);
 
 // Initialize the game on page load
 initGame();
+
