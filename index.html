@@ -10,9 +10,6 @@
     <div class="container">
         <h1>Neon Rainbow Hangman</h1>
         <div id="score-container" class="neon-text">Score: <span id="score">0</span></div>
-        <div id="word-container" class="neon-text"></div>
-        <div id="letters-container" class="neon-text"></div>
-        <div id="message" class="neon-text"></div>
         <svg id="hangman" viewBox="0 0 200 200">
             <!-- Hangman parts will be drawn here -->
             <line id="gallows" x1="20" y1="180" x2="180" y2="180"/>
@@ -26,8 +23,12 @@
             <line id="left-leg" x1="120" y1="100" x2="100" y2="130"/>
             <line id="right-leg" x1="120" y1="100" x2="140" y2="130"/>
         </svg>
+        <div id="word-container" class="neon-text"></div>
+        <div id="letters-container" class="neon-text"></div>
+        <div id="message" class="neon-text"></div>
         <button id="reset-button">Reset Game</button>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
