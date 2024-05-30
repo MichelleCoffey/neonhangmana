@@ -18,6 +18,22 @@ body {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
 }
 
+#game-title {
+    font-size: 3em;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+    animation: neon-glow-title 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow-title {
+    from {
+        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff;
+    }
+}
+
 #reset-button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -37,10 +53,26 @@ body {
 #hangman {
     width: 200px;
     height: 200px;
-    stroke: #fff;
     stroke-width: 2;
     stroke-linecap: round;
     margin-bottom: 20px; /* Add some space below the hangman */
+}
+
+.neon-line {
+    stroke: #ff00ff;
+    stroke-opacity: 1;
+    animation: neon-glow-line 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow-line {
+    from {
+        stroke: #ff00ff;
+        stroke-opacity: 0.5;
+    }
+    to {
+        stroke: #ff00ff;
+        stroke-opacity: 1;
+    }
 }
 
 #hangman line, #hangman circle {
@@ -95,4 +127,3 @@ body {
 .alphabet-button:nth-child(even) {
     color: #00ff00;
 }
-
