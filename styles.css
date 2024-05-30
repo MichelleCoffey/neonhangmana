@@ -40,7 +40,7 @@ body {
     stroke: #fff;
     stroke-width: 2;
     stroke-linecap: round;
-    display: none;
+    margin-bottom: 20px; /* Add some space below the hangman */
 }
 
 #hangman line, #hangman circle {
@@ -63,3 +63,36 @@ body {
 .neon-text {
     animation: neon-glow 1.5s ease-in-out infinite alternate;
 }
+
+.word-letter {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.alphabet-button {
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 15%, rgba(208,222,33,1) 30%, rgba(79,220,74,1) 45%, rgba(63,218,216,1) 60%, rgba(47,201,226,1) 75%, rgba(28,127,238,1) 90%, rgba(95,21,242,1) 100%);
+    border: none;
+    color: white;
+    font-size: 1em;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 10px 12px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.alphabet-button:disabled {
+    background: #555;
+    cursor: not-allowed;
+}
+
+.word-letter:nth-child(odd),
+.alphabet-button:nth-child(odd) {
+    color: #ff00ff;
+}
+
+.word-letter:nth-child(even),
+.alphabet-button:nth-child(even) {
+    color: #00ff00;
+}
+
